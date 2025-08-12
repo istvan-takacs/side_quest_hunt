@@ -1,6 +1,7 @@
 #imports
 import pandas as pd
 import streamlit as st
+import glob
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
 from reportlab.lib import colors
@@ -11,7 +12,11 @@ pd.options.mode.chained_assignment = None  # default='warn'
 # Streamlit page config
 st.set_page_config(page_title="CSV File reader",layout="wide")
 st.header("Side Quest Hunt")
-file_name = st.file_uploader("Upload the Housekeeping Report here")
+file_name = st.file_uploader("Upload the Housekeeping Report here", type="csv")
+
+# def load_images():
+#     image_files = glob.glob("images/*") # Grabs everything from images
+
 
 if file_name is not None:
     
@@ -144,6 +149,8 @@ if file_name is not None:
         file_name="side_quest_hunt.pdf",
         mime="application/pdf"
     )
+    st.header("You slay!")
+
 
 if __name__ == "__main__":
     from streamlit.runtime.scriptrunner import get_script_run_ctx
