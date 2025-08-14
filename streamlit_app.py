@@ -40,7 +40,7 @@ if file_name is not None:
     
     # create a side quest column to emphasize what might be an easy fix
     easy_fix_word_search = ["safe", "tv", "HDMI", "Chromecast", "arc", "charger", "ipad", "cable", "Airplay", "battery", "hairdrier"]
-    side_quests = filtered_df["Maintenance description"].str.contains('|'.join(easy_fix_word_search), regex=True)
+    side_quests = filtered_df["Maintenance description"].str.contains('|'.join(easy_fix_word_search),case=False, regex=True)
     filtered_df["Side Quest Material"] = side_quests
     
     # Only getting relevant columns, and sorting them so that the most likely side quests are at the top
