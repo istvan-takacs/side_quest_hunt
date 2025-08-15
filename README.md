@@ -1,19 +1,23 @@
-# 🎈 Blank app template
+# A simple app to streamline the side quest hunting process
 
-A simple Streamlit app template for you to modify!
+### How it works
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
-
-### How to run it on your own machine
-
-1. Install the requirements
+1. Download the Housekeeping report as a .csv file
 
    ```
-   $ pip install -r requirements.txt
+   You can do so in the Housekeeping tab and clicking "Export"
    ```
 
-2. Run the app
+2. Upload it on the Side Quest Hunt app
 
    ```
-   $ streamlit run streamlit_app.py
+   It will generate a .pdf detailing all the Maintenance slots that are:
+   * Not Planned
+   * Not "Stay-through"
+   * Not OOO
+
+   Side quest materials are currently elements that have the one or more of the following words in their maintencance description:
+    "safe", "tv", "HDMI", "Chromecast", "arc", "charger", "ipad", "cable", "Airplay", "battery", "hairdrier"
+
    ```
+3. Happy hunting!
